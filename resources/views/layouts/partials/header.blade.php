@@ -45,7 +45,7 @@
                 <ul class="hidden md:flex items-center space-x-6">
                     <li><a href="/" class="text-white hover:text-black">Home</a></li>
                     <li><a href="parichay.html" class="text-white hover:text-black">About Us</a></li>
-                    <li><a href="contact" class="text-white hover:text-black">Who's who</a></li>
+                    <li><a href="{{ route('contacts.index') }}" class="text-white hover:text-black">Who's who</a></li>
                     <li><a href="#dept" class="text-white hover:text-black">Department</a></li>
                     <li class="relative group">
                         <a href="#" class="text-white hover:text-black">Government Order</a>
@@ -64,7 +64,7 @@
                         </ul>
                     </li>
                     <li><a href="deg.htm" class="text-white hover:text-black">RTI</a></li>
-                    <li><a href="contact" class="text-white hover:text-black">Contact Us</a></li>
+                    <li><a href="{{ route('contacts.index') }}" class="text-white hover:text-black">Contact Us</a></li>
                     <li class="relative group">
                         <a href="#" class="text-white hover:text-black">G20 Gallery</a>
                         <ul class="absolute hidden group-hover:block bg-white shadow-lg mt-2">

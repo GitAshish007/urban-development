@@ -27,9 +27,6 @@
 </head>
 <body class="bg-gray-50 text-gray-800">
 
-<x-top-bar />
-
-<x-header />
 
 <!-- Navigation Bar -->
 <header class="bg-primary text-white text-center py-6">
@@ -40,63 +37,5 @@
     </div>
 </header>
 
-<x-image-slider />
-
-<x-missions-section />
-
-<x-footer />
-
-<!-- Scripts -->
-<script>
-    // Update current date and time
-    const currentDateTime = document.getElementById('currentDateTime');
-    function updateTime() {
-        const now = new Date();
-        const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit' };
-        currentDateTime.textContent = now.toLocaleDateString('en-US', options);
-    }
-    setInterval(updateTime, 1000);
-    updateTime();
-
-    // Mobile menu toggle
-    const menuButton = document.getElementById('menuButton');
-    menuButton.addEventListener('click', () => {
-        const navMenu = document.querySelector('nav ul');
-        navMenu.classList.toggle('hidden');
-    });
-
-    // Slider functionality
-    const slider = document.getElementById('slider');
-    const prev = document.getElementById('prev');
-    const next = document.getElementById('next');
-    let index = 0;
-
-    function updateSlider() {
-        slider.style.transform = translateX(-${index * 100}%);
-    }
-
-    next.addEventListener('click', () => {
-        index = (index + 1) % 3;
-        updateSlider();
-    });
-
-    prev.addEventListener('click', () => {
-        index = (index - 1 + 3) % 3;
-        updateSlider();
-    });
-
-    setInterval(() => {
-        index = (index + 1) % 3;
-        updateSlider();
-    }, 5000);
-
-    // Dropdown menu functionality
-    document.querySelectorAll('nav .group button').forEach(button => {
-        button.addEventListener('click', (event) => {
-            const dropdown = button.nextElementSibling;
-            dropdown.classList.toggle('hidden');
-        });
-    });
-</script>
 </body>
 </html>

@@ -1,4 +1,3 @@
-<!-- resources/views/components/image-slider.blade.php -->
 
 <section class="relative overflow-hidden py-16 bg-gray-100">
     <div class="container mx-auto">

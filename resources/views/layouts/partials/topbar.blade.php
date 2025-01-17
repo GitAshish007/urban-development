@@ -12,7 +12,7 @@
             <a href="https://www.instagram.com/nagarvikas_up/" target="_blank" class="hover:text-pink-400 transition">
                 <i class="fab fa-instagram"></i>
             </a>
-            <a href="https://youtube.com/@nagarvikasvibhagup?si=rNIgtGPNFct-k9aR" target="_blank" class="hover:text-red-400 transition">
+            <a href="#" target="_blank" class="hover:text-red-400 transition">
                 <i class="fab fa-youtube"></i>
             </a>
         </div>
