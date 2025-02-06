@@ -2,7 +2,7 @@
 
 @section('childContent')
     @include('layouts.partials.topbar')
-    @include('layouts.partials.header')
+    @include('layouts.partials.navigation')
 
     @yield('content')
 

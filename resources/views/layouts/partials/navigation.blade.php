@@ -44,7 +44,7 @@
                 </button>
                 <ul class="hidden md:flex items-center space-x-6">
                     <li><a href="/" class="text-white hover:text-black">Home</a></li>
-                    <li><a href="parichay.html" class="text-white hover:text-black">About Us</a></li>
+                    <li><a href="{{ route('about') }}" class="text-white hover:text-black">About Us</a></li>
                     <li><a href="{{ route('contacts.index') }}" class="text-white hover:text-black">Who's who</a></li>
                     <li><a href="#dept" class="text-white hover:text-black">Department</a></li>
                     <li class="relative group">
@@ -74,7 +74,13 @@
                         </ul>
                     </li>
                 </ul>
+                <div>
+                    <button class="text-white hover:bg-zinc-600 h-15 w-20 py-1 px-1 rounded-2xl">
+                        <a href="{{route('login')}}">Sign in</a>
+                    </button>
+                </div>
             </nav>
+
         </div>
     </div>
 </div>
