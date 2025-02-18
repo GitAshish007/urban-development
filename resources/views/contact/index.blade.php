@@ -6,7 +6,7 @@
 
 @section('content')
 <section class="relative overflow-auto py-16 bg-amber-50">
-    <div class="container mx-auto">
+    <div class="container mx-auto h-screen">
         <h1 class="text-2xl font-bold mb-6">Contacts</h1>
         <a href="{{ route('contacts.create') }}" class="bg-blue-500 text-white px-4 py-2 rounded shadow hover:bg-blue-600 mb-4 inline-block">Add Contact</a>
         <table class="min-w-full bg-white rounded-lg shadow">

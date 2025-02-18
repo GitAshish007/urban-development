@@ -1,5 +1,5 @@
 
-<div class="bg-primary text-white py-2">
+<div class="bg-primary text-white py-1">
     <div class="container mx-auto flex justify-between items-center px-6">
         <div id="currentDateTime" class="text-sm"></div>
         <div class="flex space-x-4">
