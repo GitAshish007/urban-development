@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\FinancialController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -34,4 +35,6 @@ Route::get('/admin/dashboard', [AdminController::class, 'AdminDashboard'])->name
 
 //this route is created for update the contact page
 Route::resource('contacts', ContactController::class);
+
+Route::resource('financial', FinancialController::class);
 

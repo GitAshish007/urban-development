@@ -31,6 +31,7 @@
             </div>
         </div>
     </div>
+{{--    mobile menu--}}
     <div class="bg-orange-500">
         <div class="container mx-auto px-4">
             <nav class="flex items-center justify-between py-1">
@@ -57,7 +58,8 @@
                     <li class="relative group">
                         <a href="#" class="text-white hover:bg-zinc-600 h-15 w-20 py-2.5 px-2.5 rounded-md">Financial Sanctions</a>
                         <ul class="absolute hidden group-hover:block bg-white shadow-lg mt-2 py-2 rounded-md w-48 z-10 focus:outline-none ">
-                            <li><a href="" target="_blank" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">FY 2024-25</a></li>
+                            <li><a href="{{route('financial.index')}}" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">FY 2025-26</a></li>
+                            <li><a href="{{route('financial.index')}}" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">FY 2024-25</a></li>
                             <li><a href="" target="_blank" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">FY 2023-24</a></li>
                             <li><a href="" target="_blank" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">FY 2022-23</a></li>
                             <li><a href="" target="_blank" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">FY 2021-22</a></li>
@@ -65,9 +67,9 @@
                             <li><a href="" target="_blank" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">FY 2019-20</a></li>
                             <!-- Add other years here -->
                         </ul>
-
-
                     </li>
+
+
                     <li><a href="#" class="text-white hover:bg-zinc-600 h-15 w-20 py-2.5 px-2.5 rounded-md">RTI</a></li>
                     <li><a href="{{ route('contacts.index') }}" class="text-white hover:bg-zinc-600 h-15 w-20 py-2.5 px-2.5 rounded-md">Contact Us</a></li>
                     <li class="relative group">
@@ -77,6 +79,7 @@
                             <li><a href="#" target="_blank" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Video Gallery</a></li>
                         </ul>
                     </li>
+
                 </ul>
                 <div>
                     <button class="text-white hover:bg-zinc-600 h-15 w-20 py-1 px-1 rounded-md">

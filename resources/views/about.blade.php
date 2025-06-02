@@ -4,8 +4,8 @@
 @section('title', 'About Us')
 
 @section('content')
-
-    <header class="bg-blue-600 text-white py-4 shadow-md">
+<div class=" bg-amber-100 w-full container mx-auto mt-4 rounded-lg">
+    <header class="bg-gray-400 text-white py-4 shadow-md rounded-lg">
         <h1 class="text-center text-2xl font-bold">नगर विकास विभाग: एक परिचय</h1>
     </header>
 
@@ -56,6 +56,9 @@
         </section>
 
     </main>
+
+</div>
+
 
 
 @endsection

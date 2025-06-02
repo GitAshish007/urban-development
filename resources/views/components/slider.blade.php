@@ -1,82 +1,54 @@
-<section class="relative overflow-hidden py-4 bg-gray-50">
-    <div class="container mx-auto">
-        <div class="relative overflow-hidden">
-            <!-- Slider Wrapper -->
-            <div class="slider-wrapper overflow-hidden relative w-full">
-                <div
-                    class="slider flex transition-transform duration-700 ease-in-out"
-                    id="slider"
-                >
-                    <!-- Duplicate Last Slide for Infinite Loop -->
-                    <img src="{{ asset('images/') }}" alt="Slider Image 6" class="slide w-full h-[60vh] object-cover flex-shrink-0 transition-transform duration-500">
+<section class="relative py-4 bg-gray-50">
+    <div class="container mx-auto px-4">
+        <div class="flex flex-wrap">
+            <!-- Left: Carousel (70%) -->
+            <div class="w-full md:w-9/12 pr-2">
+                <div class="relative overflow-hidden rounded-lg h-[55vh]">
+                    <div class="slider-wrapper overflow-hidden relative w-full h-full">
+                        <div class="slider flex transition-transform duration-700 ease-in-out h-full" id="slider">
+                            <img src="{{ asset('images/Nature2.jpg') }}" alt="Image 3" class="slide w-full h-full object-cover flex-shrink-0">
+                            <img src="{{ asset('images/Kumbh2.png') }}" alt="Image 1" class="slide w-full h-full object-cover flex-shrink-0">
+                            <img src="{{ asset('images/Kumbh1.png') }}" alt="Image 7" class="slide w-full h-full object-cover flex-shrink-0">
+                            <img src="{{ asset('images/Nature1.jpg') }}" alt="Image 2" class="slide w-full h-full object-cover flex-shrink-0">
+                            <img src="{{ asset('images/Nature4.jpg') }}" alt="Image 5" class="slide w-full h-full object-cover flex-shrink-0">
+                            <img src="{{ asset('images/Kumbh.png') }}" alt="Image 6" class="slide w-full h-full object-cover flex-shrink-0">
+                            <img src="{{ asset('images/Nature.jpg') }}" alt="Image 4" class="slide w-full h-full object-cover flex-shrink-0">
+                            <img src="{{ asset('images/Kumbh2.png') }}" alt="Image 8 Duplicate" class="slide w-full h-full object-cover flex-shrink-0">
+                        </div>
+                    </div>
 
-                    <!-- Original Slides -->
-                    <img src="{{ asset('images/') }}" alt="Slider Image 1" class="slide w-full h-[60vh] object-cover flex-shrink-0 transition-transform duration-500">
-                    <img src="{{ asset('images/') }}" alt="Slider Image 2" class="slide w-full h-[60vh] object-cover flex-shrink-0 transition-transform duration-500">
-                    <img src="{{ asset('images/') }}" alt="Slider Image 3" class="slide w-full h-[60vh] object-cover flex-shrink-0 transition-transform duration-500">
-                    <img src="{{ asset('images/') }}" alt="Slider Image 4" class="slide w-full h-[60vh] object-cover flex-shrink-0 transition-transform duration-500">
-                    <img src="{{ asset('images/') }}" alt="Slider Image 5" class="slide w-full h-[60vh] object-cover flex-shrink-0 transition-transform duration-500">
-                    <img src="{{ asset('images/') }}" alt="Slider Image 6" class="slide w-full h-[60vh] object-cover flex-shrink-0 transition-transform duration-500">
-
-                    <!-- Duplicate First Slide for Infinite Loop -->
-                    <img src="{{ asset('images/') }}" alt="Slider Image 1" class="slide w-full h-[60vh] object-cover flex-shrink-0 transition-transform duration-500">
+                    <!-- Nav buttons -->
+                    <button class="absolute top-1/2 left-2 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-md hover:bg-gray-200" id="prev">&#10094;</button>
+                    <button class="absolute top-1/2 right-2 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-md hover:bg-gray-200" id="next">&#10095;</button>
                 </div>
             </div>
 
-            <!-- Navigation Buttons -->
-            <button
-                class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-md hover:bg-gray-200"
-                id="prev"
-            >
-                &#10094;
-            </button>
-            <button
-                class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-md hover:bg-gray-200"
-                id="next"
-            >
-                &#10095;
-            </button>
+            <!-- Right: Profile Cards (30%) -->
+            <x-profilecard/>
+
         </div>
     </div>
 </section>
-
-
-
 
 <script>
     const slider = document.getElementById("slider");
     const prevButton = document.getElementById("prev");
     const nextButton = document.getElementById("next");
 
-    let currentIndex = 1; // Start at 1 because of duplicated first slide
+    let currentIndex = 1;
     const slides = document.querySelectorAll(".slide");
     const totalSlides = slides.length;
     let slideWidth = slides[0].clientWidth;
 
-    // Set initial position
-    slider.style.transform = `translateX(-${slideWidth}px)`;
-
-    const updateSliderPosition = () => {
-        // Smooth transition
+    function updateSliderPosition() {
         slider.style.transition = "transform 0.7s ease-in-out";
         slider.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+    }
 
-        // Apply zoom-in effect to the active slide
-        slides.forEach((slide, index) => {
-            if (index === currentIndex) {
-                slide.style.transform = "scale(1.1)";
-            } else {
-                slide.style.transform = "scale(1)";
-            }
-        });
-    };
-
-    // Move to next slide
-    nextButton.addEventListener("click", () => {
+    function goToNextSlide() {
         if (currentIndex >= totalSlides - 1) return;
         currentIndex++;
         updateSliderPosition();
-
         if (currentIndex === totalSlides - 1) {
             setTimeout(() => {
                 slider.style.transition = "none";
@@ -84,14 +56,12 @@
                 slider.style.transform = `translateX(-${slideWidth}px)`;
             }, 700);
         }
-    });
+    }
 
-    // Move to previous slide
-    prevButton.addEventListener("click", () => {
+    function goToPrevSlide() {
         if (currentIndex <= 0) return;
         currentIndex--;
         updateSliderPosition();
-
         if (currentIndex === 0) {
             setTimeout(() => {
                 slider.style.transition = "none";
@@ -99,22 +69,28 @@
                 slider.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
             }, 700);
         }
+    }
+
+    nextButton.addEventListener("click", goToNextSlide);
+    prevButton.addEventListener("click", goToPrevSlide);
+
+    // Initial position
+    slider.style.transform = `translateX(-${slideWidth}px)`;
+
+    // Auto-slide
+    let autoSlideInterval = setInterval(goToNextSlide, 5000);
+
+    [prevButton, nextButton].forEach(btn => {
+        btn.addEventListener("click", () => {
+            clearInterval(autoSlideInterval);
+            autoSlideInterval = setInterval(goToNextSlide, 5000);
+        });
     });
 
-    // Auto-slide every 5 seconds
-    const autoSlide = () => {
-        nextButton.click();
-        setTimeout(autoSlide, 5000);
-    };
-
-    // Start auto-sliding
-    setTimeout(autoSlide, 5000);
-
-    // Adjust slider width dynamically on resize
+    // Handle resize
     window.addEventListener("resize", () => {
         slideWidth = slides[0].clientWidth;
+        slider.style.transition = "none";
         slider.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
     });
-
-
 </script>

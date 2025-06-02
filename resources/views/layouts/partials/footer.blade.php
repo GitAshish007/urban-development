@@ -1,4 +1,4 @@
-<footer class="bg-white text-white py-10">
+<footer class="bg-amber-50 text-white py-2 ">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="grid grid-cols-2 sm:grid-cols-4 gap-8">
                     <div>
@@ -16,7 +16,6 @@
                     <div>
                         <h3 class="text-lg font-semibold text-gray-900 mb-4">Support</h3>
                         <ul class="space-y-2 text-gray-600">
-                            <li>Submit ticket</li>
                             <li>Documentation</li>
                             <li>Guides</li>
                         </ul>
@@ -27,8 +26,6 @@
                         <ul class="space-y-2 text-gray-600">
                             <li>About</li>
                             <li>Blog</li>
-                            <li>Jobs</li>
-                            <li>Press</li>
                         </ul>
                     </div>
 

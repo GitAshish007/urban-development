@@ -104,7 +104,7 @@
                         </ul>
                     </li>
                     <li class="relative group">
-                        <a href="#" class="text-white hover:text-black">Financial Sanctions</a>
+                        <a href="#" class="text-white hover:text-black">financial Sanctions</a>
                         <ul class="absolute hidden group-hover:block bg-white shadow-lg mt-2">
                             <li><a href="Financial_SenctionNewIF24-25.html" target="_blank" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">FY 2024-25</a></li>
                             <li><a href="Financial_SenctionNewIF23-24.html" target="_blank" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">FY 2023-24</a></li>
