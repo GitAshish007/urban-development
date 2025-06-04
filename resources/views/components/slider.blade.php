@@ -13,7 +13,7 @@
                             <img src="{{ asset('images/Nature4.jpg') }}" alt="Image 5" class="slide w-full h-full object-cover flex-shrink-0">
                             <img src="{{ asset('images/Kumbh.png') }}" alt="Image 6" class="slide w-full h-full object-cover flex-shrink-0">
                             <img src="{{ asset('images/Nature.jpg') }}" alt="Image 4" class="slide w-full h-full object-cover flex-shrink-0">
-                            <img src="{{ asset('images/Kumbh2.png') }}" alt="Image 8 Duplicate" class="slide w-full h-full object-cover flex-shrink-0">
+                            <img src="{{ asset('images/.png') }}" alt="Image 8 Duplicate" class="slide w-full h-full object-cover flex-shrink-0">
                         </div>
                     </div>
 
