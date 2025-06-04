@@ -6,14 +6,14 @@
                 <div class="relative overflow-hidden rounded-lg h-[55vh]">
                     <div class="slider-wrapper overflow-hidden relative w-full h-full">
                         <div class="slider flex transition-transform duration-700 ease-in-out h-full" id="slider">
-                            <img src="{{ asset('images/Nature2.jpg') }}" alt="Image 3" class="slide w-full h-full object-cover flex-shrink-0">
+                            <img src="{{ asset('images/CM-1.png') }}" alt="Image 3" class="slide w-full h-full object-cover flex-shrink-0">
                             <img src="{{ asset('images/Kumbh2.png') }}" alt="Image 1" class="slide w-full h-full object-cover flex-shrink-0">
                             <img src="{{ asset('images/Kumbh1.png') }}" alt="Image 7" class="slide w-full h-full object-cover flex-shrink-0">
                             <img src="{{ asset('images/Nature1.jpg') }}" alt="Image 2" class="slide w-full h-full object-cover flex-shrink-0">
-                            <img src="{{ asset('images/Nature4.jpg') }}" alt="Image 5" class="slide w-full h-full object-cover flex-shrink-0">
+                            <img src="{{ asset('images/Kumbh_1.jpg') }}" alt="Image 5" class="slide w-full h-full object-cover flex-shrink-0">
                             <img src="{{ asset('images/Kumbh.png') }}" alt="Image 6" class="slide w-full h-full object-cover flex-shrink-0">
-                            <img src="{{ asset('images/Nature.jpg') }}" alt="Image 4" class="slide w-full h-full object-cover flex-shrink-0">
-                            <img src="{{ asset('images/.png') }}" alt="Image 8 Duplicate" class="slide w-full h-full object-cover flex-shrink-0">
+                            <img src="{{ asset('images/Yogi.png') }}" alt="Image 4" class="slide w-full h-full object-cover flex-shrink-0">
+                            <img src="{{ asset('images/KumbhFlower.png') }}" alt="Image 8 Duplicate" class="slide w-full h-full object-cover flex-shrink-0">
                         </div>
                     </div>
 
